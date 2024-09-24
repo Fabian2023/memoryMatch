@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import  { useEffect } from 'react';
 import Carta from './Carta';
 
 export default function Tablero({ baraja, parejaSeleccionada, seleccionarCarta, setParejaSeleccionada }) {
@@ -10,15 +11,16 @@ export default function Tablero({ baraja, parejaSeleccionada, seleccionarCarta, 
         carta1.fueAdivinada = true;
         carta2.fueAdivinada = true;
       }
-      setTimeout(() => {
-        setParejaSeleccionada([]); // Resetear selección
-      }, 1000);
+      // setTimeout(() => {
+      //   setParejaSeleccionada([]); // Resetear selección
+      // }, 1000);
     }
   }, [parejaSeleccionada, setParejaSeleccionada]);
 
   return (
     <div className="tablero">
       {baraja.map((carta, index) => (
+        
         <Carta
           key={index}
           icono={carta.icono}

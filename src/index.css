@@ -12,9 +12,9 @@ body {
   display: flex;
   flex-wrap:wrap;
   width: 90vw;
-  height: 80vh;
-  margin: 0 auto;
+  height:70vh;
   justify-content: space-around;
+  margin-top: 220px; 
 }
 
 header {
@@ -22,18 +22,38 @@ header {
   border: 1px solid transparent;
   margin-bottom: 10px;
   display: flex;
-  justify-content: center; 
   align-items: center; 
+  justify-content: space-between;
+  flex-direction: row; 
+  
 }
 
 .titulo {
-  font-size: 70hv;
-  font-weight:500;
-  padding: 1px;
-  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  padding: 12px; /* Ajustar padding según sea necesario */
+  color: white;
+  background-color: #FAC224; 
   font-family: 'Montserrat', sans-serif;
+  font-size: 50px; 
+  margin-right: 10px; /* Espacio entre Intentos y Puntos */
+  margin-top: 300px; 
+  
 }
 
+.puntos {
+  text-align: center; /* Asegurarte de que el texto esté centrado */
+  padding: 12px; /* Agregar padding si es necesario */
+  color: white;
+  background-color: #FAC224; /* Mismo color para coherencia */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px; /* Asegúrate de que el tamaño sea el mismo que .titulo */
+  border-radius: 15px; /* Alinear visualmente con el título */
+}
+
+.intentos, .puntos {
+  margin-top: 300px; /* Añadir espaciado si es necesario */
+}
 
 
 .boton-reiniciar {
@@ -49,13 +69,15 @@ header {
 
 .carta {
   width: 20vw;
-  height: 20vh;
+  height: 10vh;
+  
 }
 
 .portada {
   width: 20vw;
   height: 20vh;
-  background-color: #23b9df;
+  background-color: #FAC224;
+  
 }
 
 .contenido {
@@ -78,47 +100,196 @@ header {
   object-fit: contain;
 }
 
-body {
-   background-color: rgb(96, 119, 245); 
-  /* background-image: url("/newbg.jpg"); */
-}
 
-div:focus {
-  outline: none !important;
-}
-
-.registro {
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+
 }
 
-input {
-  font-size: 1.5em;
-  margin: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  width: 250px;
-}
-
-button {
-  background: #0383bc;
-  color: white;
-  font-size: 1.5em;
+.open-button {
   padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
 
-button:hover {
-  background: #025a8a;
+.open-button:hover {
+  background-color: #2980b9;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: rgba(250, 194, 36, 0.5); /* 50% de opacidad */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal p {
+  color: white;
+}
+
+.close-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FAC224;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 35px;
+  width: 300px;
+  height: 60px;
+
+}
+
+.close-button:hover {
+  background-color: #fac638;
+}
+
+
+
+
+/* Estilos para dispositivos en posición vertical */
+@media (orientation: portrait) {
+  body {
+    background-image: url("/JUEGO.png");
+    background-size: cover; /* Ajusta la imagen al tamaño del dispositivo */
+  }
+
+  .registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-image: url('./images/fondoregis.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    width: 100vw;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 70vw;
+    height: 8vh;
+    border-radius: 20px;
+    background: #06ADBF;
+    margin-bottom: 5rem; /* Espacio entre elementos */
+    border: none; /* Quita el borde del botón */
+    font-size: 4.5rem; /* Tamaño de fuente */
+    color: rgba(255, 255, 255, 0.50);
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; /* 90% */
+  }
+  
+  button {
+    width: 70vw;
+    height: 9vh;
+    border-radius: 20px;
+    background: #FAC224;
+    margin-bottom: 3rem; /* Espacio entre elementos */
+    border: none; /* Quita el borde del botón */
+    color: #fff; /* Color del texto */
+    font-size: 4rem; /* Tamaño de fuente */
+  }
+
+  input {
+    margin-top: 550px;
+    background: rgba(255, 255, 255, 0.5); /* Color blanco con 50% de transparencia */
+    padding: 0.5rem; /* Espacio interno en el input */
+    text-align: center;
+    color: #000000; 
+}
+
+
+
+
+
+}
+
+/* Estilos para dispositivos en posición horizontal */
+@media (orientation: landscape) {
+  body {
+    background-image: url("/bghorizontal.png");
+    background-size: cover; /* Ajusta la imagen al tamaño del dispositivo */
+  }
+
+  .registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input, 
+  button {
+    width: 40vw;
+    height: 8vh;
+    border-radius: 24px;
+    background: #06ADBF;
+    margin-bottom: 1rem; /* Espacio entre elementos */
+    border: none; /* Quita el borde del botón */
+    color: #fff; /* Color del texto */
+    font-size: 1rem; /* Tamaño de fuente */
+  }
+
+  input {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem; /* Espacio interno en el input */
+  }
+
+  button:hover {
+    background: #025a8a;
+  }
+}
+
+
+
