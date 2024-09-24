@@ -238,8 +238,8 @@ header {
   }
   
   button {
-    width: 72vw;
-    height: 7.5vh;
+    width: 70vw;
+    height: 7vh;
     border-radius: 30px;
     background: #FAC224;
     margin-bottom: 3rem; /* Espacio entre elementos */
@@ -254,7 +254,8 @@ header {
     padding: 0.5rem; /* Espacio interno en el input */
     text-align: center;
     color: #000000; 
-    height: 7.5vh;
+    height: 7vh;
+    width: 65vw;
 }
 
 
