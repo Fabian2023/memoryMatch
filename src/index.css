@@ -175,6 +175,19 @@ header {
   background-color: #fac638;
 }
 
+@font-face {
+  font-family: 'Kanit';
+  src: url('./fonts/Kanit-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Estilo para el botón */
+.button-continuar {
+  font-family: 'Kanit', sans-serif;
+  font-size: 76px; /* Ajusta el tamaño según necesites */
+  /* Otros estilos para el botón */
+}
 
 
 

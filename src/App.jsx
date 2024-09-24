@@ -39,8 +39,11 @@ class App extends Component {
 
   // Método para cerrar el modal
   closeModal = () => {
-    this.setState({ isOpen: false, mostrarVideoCierre: true,
-      tiempoVideoCierre: 0, });
+    this.setState({
+      isOpen: false,
+      mostrarVideoCierre: true,
+      tiempoVideoCierre: 0,
+    });
   };
 
   handleVideoClick = () => {
@@ -160,7 +163,6 @@ class App extends Component {
       await this.saveData();
       // alert(`Ganaste en ${this.state.numeroDeIntentos} intentos!`);
       this.setState({
-       
         isOpen: true,
       });
     }
@@ -224,13 +226,12 @@ class App extends Component {
         <div className="container">
           <div className="modal-overlay">
             <div className="modal">
-              <p>
-                {`Ganaste en ${this.state.numeroDeIntentos} intentos!`}
-              </p>
+              <p>{`Ganaste en ${this.state.numeroDeIntentos} intentos!`}</p>
               <button onClick={this.closeModal} className="close-button">
                 Cerrar
               </button>
             </div>
+            2y1jr8
           </div>
         </div>
       );
@@ -249,11 +250,15 @@ class App extends Component {
               <input
                 type="email"
                 name="codigo"
-                placeholder="Ingresa tu codigo"
+                placeholder="Ingresa el codigo"
                 value={this.state.codigo}
                 onChange={this.handleChange}
               />
-              <button type="button" onClick={this.handleRegistro}>
+              <button
+                type="button"
+                onClick={this.handleRegistro}
+                className="button-continuar"
+              >
                 CONTINUAR
               </button>
             </form>
