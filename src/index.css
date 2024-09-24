@@ -238,9 +238,9 @@ header {
   }
   
   button {
-    width: 70vw;
-    height: 9vh;
-    border-radius: 20px;
+    width: 72vw;
+    height: 7.5vh;
+    border-radius: 30px;
     background: #FAC224;
     margin-bottom: 3rem; /* Espacio entre elementos */
     border: none; /* Quita el borde del botón */
@@ -250,10 +250,11 @@ header {
 
   input {
     margin-top: 550px;
-    background: rgba(255, 255, 255, 0.5); /* Color blanco con 50% de transparencia */
+    background: #fff; /* Color blanco con 50% de transparencia */
     padding: 0.5rem; /* Espacio interno en el input */
     text-align: center;
     color: #000000; 
+    height: 7.5vh;
 }
 
 
